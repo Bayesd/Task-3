@@ -1,21 +1,26 @@
 package com.company;
+import java.util.Scanner;
 
-public class Main {
+public class TheGame {
+    static boolean isRunning = true;
+
     public static void main(String[] args) {
-        System.out.println("Hej världen!");
-        static String[] Characters = {"Hulk", "Wolverine", "Thor", "Groot"};
 
-        static int haha;
-
-        public static void main(String[] args) {
-
+        while (isRunning) {
+            Scanner sc = new Scanner(System.in);
 
             try {
-                System.out.println(haha);
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.err.println(e);
-            } finally {
-                System.out.println("Always execute this code");
+                System.out.println("Welcome to The Game");
+                boolean in = sc.nextBoolean();
+                System.out.println("You lost The Game.");
+                if (in) {
+                    isRunning = false;
+                }
+            } catch (Exception e) {
+                System.err.println("You lost The Game.");
             }
+
+        }
     }
 }
+//          https://sv.wikipedia.org/wiki/The_Game_(tankespel)
